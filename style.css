@@ -5,8 +5,9 @@ body {
 table {
 	border-collapse: collapse;
 	margin: auto;
-	width: 500px;
-	height: 500px;
+	table-layout: fixed;
+	width: 480px;
+	height: 480px;
 	border: 2px solid black;
 	border-color: black;
 }
@@ -14,18 +15,23 @@ table {
 td {
 	/* border-collapse: collapse; */
 
-	width: 62.5px;
-	height: 62.5px;
+	width: 60px;
+	min-width: 60px;
+	min-height: 60px;
+	height: 60px;
 	color: red;
 	border: 0px solid black;
 	border-color: black;
+	word-wrap: break-word;
 }
 
 img {
-	grid-column: 1;
-	grid-row: 1;
-	position: relative;
+	/* grid-column: 1;
+	grid-row: 1; */
+	/* position: relative; */
 	z-index: 5;
-	width: 60px;
-	height: 60px;
+	width: 40px;
+	height: 55px;
+	padding: 3px;
+	padding-left: 12px;
 }

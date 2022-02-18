@@ -1405,6 +1405,10 @@ function obtenerPocision(j) {
 function crearPieza(imag) {
 	var imagen = document.createElement('img');
 	imagen.setAttribute('src', imag);
+	if (imag == 'peonBlanco.png') {
+		imagen.setAttribute('class', 'peonBlanco');
+	}
+
 	return imagen;
 }
 
@@ -1423,9 +1427,11 @@ function verificarColor(strIma) {
 var peon = {
 	imaB: 'peonBlanco.png',
 	imaN: 'peonNegro.png',
-	mostrarB: function (ni) {
+	mostrarB: (ni) => {
 		nodos[ni].appendChild(crearPieza(peon.imaB));
 		nodos[ni].setAttribute('id', peon.imaB);
+
+		console.log(`Esto es class${nodos[ni]}`);
 	},
 	mostrarN: function (ni) {
 		nodos[ni].appendChild(crearPieza(peon.imaN));
